@@ -1,0 +1,20 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "postgres",
+  "password": "docker",
+  "database": "blacklist_db",
+  "synchronize": true,
+  "logging": false,
+  "entities": [
+    "src/models/**/*.ts"
+  ],
+  "migrations": [
+    "src/database/migrations/**/*.ts"
+  ],
+  "cli":{
+    "migrationsDir": "src/database/migrations",
+    "entitiesDir": "src/models"
+  }
+}
